@@ -1,0 +1,45 @@
+<html>  
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Inputs</title>
+        <script type="text/javascript" src="maps.js"></script>
+        <!--Jquery-->
+        <script src="https://code.jquery.com/jquery-3.2.1.js" 
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+        crossorigin="anonymous"></script> 
+        
+    </head>
+    <body>
+        <h1>Maps</h1>
+        <!--find location based on values chosen-->
+         <label>Choose a location:</label>
+                <select id="location" onselect="locationSel()">
+                    <option value="1" id="salisbury">Salisbury</option>
+                    <option value="2" id="fruitland">Fruitland</option>
+                    <option value="3" id="pemberton">Pemberton Historical Park</option>
+                </select>
+        <!--find location based on the values entered-->
+        <form name="find-location" onsubmit="gmap()">
+           
+            <br> <br>
+            <label>Latitude:</label>
+                <input type="text" id="latitude">
+            <label>Longitutde:</label>
+                <input type="text" id="longitude">
+            <label>Zoom:</label>
+                <input type="text" id="zoom">
+            <input type="submit">
+        </form>
+
+        
+        <!---Map-->
+        
+        <section>
+            
+            
+       <img src="https://maps.googleapis.com/maps/api/staticmap?center=38.360674,+-75.599369&zoom=13&size=600x400&maptype=roadmap" id="map">
+      
+        </section>
+    </body>
